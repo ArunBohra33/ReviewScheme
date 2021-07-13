@@ -21,14 +21,14 @@
     .middle-box-2,
     .middle-box-3,
     .right-box {
-        width: 10rem;
+        width: 10.5rem;
         height: 3rem;
     }
 
     .right-box::after,
     .left-box::after {
-        border-top: 1.52rem solid transparent;
-        border-bottom: 1.52rem solid transparent;
+        border-top: 1.5rem solid transparent;
+        border-bottom: 1.5rem solid transparent;
     }
 }
 
