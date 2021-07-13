@@ -1,0 +1,55 @@
+/* Left box */
+
+.click-left-box {
+    background-color: red;
+    transition: all 0.5s;
+}
+
+.click-left-box::after {
+    border-left-color: red;
+    border-right-color: red;
+}
+
+.click-box-1 {
+    background-color: orangered;
+    transition: all 0.5s;
+}
+
+.click-box-1::after {
+    border-left-color: orangered;
+    border-right-color: orangered;
+}
+
+/* Middle boxes */
+
+.click-box-2 {
+    background-color: yellow;
+    transition: all 0.5s;
+}
+
+.click-box-2::after {
+    border-left-color: yellow;
+    border-right-color: yellow;
+}
+
+.click-box-3 {
+    background-color: yellowgreen;
+    transition: all 0.5s;
+}
+
+.click-box-3::after {
+    border-left-color: yellowgreen;
+    border-right-color: yellowgreen;
+}
+
+/* Right box */
+
+.click-right-box {
+    background-color: darkgreen;
+    transition: all 0.5s;
+}
+
+.click-right-box::after {
+    border-left-color: darkgreen;
+    border-right-color: darkgreen;
+}

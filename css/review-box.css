@@ -1,0 +1,119 @@
+.left-box,
+.middle-box-1,
+.middle-box-2,
+.middle-box-3,
+.right-box {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    background-color: #bbbbbb;
+    position: relative;
+    cursor: pointer;
+    transition: all 0s;
+}
+
+/* ----------------------------- */
+/* After psudo emements */
+/* ----------------------------- */
+.right-box::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: -15px;
+
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+
+    border-left: 15px solid #bbb;
+}
+
+.left-box::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -15px;
+
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+
+    border-right: 15px solid #bbb;
+}
+
+/* ----------------------------- */
+/* Before psudo emements */
+/* ----------------------------- */
+
+.left-box::before {
+    content: "Extremely bad";
+    display: inline-block;
+    color: #000;
+    font-size: 1.2rem;
+    margin: 0.4rem;
+    font-size: 1.4rem;
+
+    position: absolute;
+    top: -2.5rem;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.middle-box-1::before {
+    content: "Bad";
+    display: inline-block;
+    color: #000;
+    font-size: 1.2rem;
+    margin: 0.4rem;
+    font-size: 1.4rem;
+
+    position: absolute;
+    top: -2.5rem;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.middle-box-2::before {
+    content: "Neutral";
+    display: inline-block;
+    color: #000;
+    font-size: 1.2rem;
+    margin: 0.4rem;
+    font-size: 1.4rem;
+
+    position: absolute;
+    top: -2.5rem;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.middle-box-3::before {
+    content: "Good";
+    display: inline-block;
+    color: #000;
+    font-size: 1.2rem;
+    margin: 0.4rem;
+    font-size: 1.4rem;
+
+    position: absolute;
+    top: -2.5rem;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right-box::before {
+    content: "Extremely good";
+    display: inline-block;
+    color: #000;
+    font-size: 1rem;
+    margin: 0.4rem;
+    font-size: 1.4rem;
+
+    position: absolute;
+    top: -2.5rem;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
