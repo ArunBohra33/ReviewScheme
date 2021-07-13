@@ -1,0 +1,79 @@
+.left-box,
+.middle-box-1,
+.middle-box-2,
+.middle-box-3,
+.right-box {
+    display: inline-block;
+    width: 15rem;
+    height: 4rem;
+    background-color: #bbbbbb;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+/* ----------------------------- */
+/* After psudo emements */
+/* ----------------------------- */
+.right-box::after,
+.left-box::after {
+    content: '';
+    display: inline-block;
+    border-top: 2rem solid transparent;
+    border-bottom: 2rem solid transparent;
+
+    position: absolute;
+}
+
+.right-box::after {
+    top: 0;
+    right: -1.5rem;
+    border-left: 1.5rem solid #bbb;
+}
+
+.left-box::after {
+    top: 0;
+    left: -1.5rem;
+    border-right: 1.5rem solid #bbb;
+}
+
+/* ----------------------------- */
+/* Before psudo emements */
+/* ----------------------------- */
+
+.left-box::before,
+.middle-box-1::before,
+.middle-box-2::before,
+.middle-box-3::before,
+.right-box::before {
+    width: 100%;
+    display: inline-block;
+    color: black;
+    margin: 0.4rem;
+    font-size: 1.4rem;
+    position: absolute;
+    top: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Before elements content */
+.left-box::before {
+    content: 'Extremely bad';
+}
+
+.middle-box-1::before {
+    content: 'Bad';
+}
+
+.middle-box-2::before {
+    content: 'Neutral';
+}
+
+.middle-box-3::before {
+    content: 'Good';
+}
+
+.right-box::before {
+    content: 'Extremely good';
+}

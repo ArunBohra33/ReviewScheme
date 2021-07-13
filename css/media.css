@@ -1,0 +1,50 @@
+@media only screen and (max-width: 920px) {
+    .left-box,
+    .middle-box-1,
+    .middle-box-2,
+    .middle-box-3,
+    .right-box {
+        width: 12rem;
+        height: 3.5rem;
+    }
+
+    .right-box::after,
+    .left-box::after {
+        border-top: 1.75rem solid transparent;
+        border-bottom: 1.75rem solid transparent;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .left-box,
+    .middle-box-1,
+    .middle-box-2,
+    .middle-box-3,
+    .right-box {
+        width: 10rem;
+        height: 3rem;
+    }
+
+    .right-box::after,
+    .left-box::after {
+        border-top: 1.52rem solid transparent;
+        border-bottom: 1.52rem solid transparent;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    html {
+        font-size: 52%;
+    }
+
+    .left-box::before,
+    .middle-box-1::before,
+    .middle-box-2::before,
+    .middle-box-3::before,
+    .right-box::before {
+        top: 35%;
+        transform: translate(-50%, -50%);
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+}
