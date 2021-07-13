@@ -1,181 +1,146 @@
-// //////////////////////////////////
-// Competency review box
+// //////////////////
+// QUERY SELECTORS
 
-const responsiveReviewBox = document.querySelectorAll(".responsive-review-box");
-const competencyLeftBox = document.querySelector(".conpetency-review-box");
+const responsiveReviewBox = document.querySelectorAll('.responsive-review-box');
+const conpetencyReviewBox = document.querySelectorAll('.conpetency-review-box');
+const trustReviewBox = document.querySelectorAll('.trust-review-box');
+const serviceReviewBox = document.querySelectorAll('.service-review-box');
 
-const submitButton = document.querySelector(".submit-button");
+const submitButton = document.querySelector('.submit-button');
 
-// Functions
+// //////////////////
+// VARIABLES
 
-const nameTheFunc = function (selectedItemId) {
-    responsiveReviewBox[selectedItemId].addEventListener("click", function () {
-        switch (selectedItemId) {
-            case 0:
-                for (let j = 0; j <= selectedItemId; j++) {
-                    if (responsiveReviewBox[j].classList.contains("click-box-1"))
-                        responsiveReviewBox[j].classList.remove("click-box-1");
+const allColorClassNames = [
+    'click-left-box',
+    'click-box-1',
+    'click-box-2',
+    'click-box-3',
+    'click-right-box',
+];
 
-                    if (responsiveReviewBox[j].classList.contains("click-box-2"))
-                        responsiveReviewBox[j].classList.remove("click-box-2");
+let responsivenessFeedback, conpetencyFeedback, trustFeedback, serviceFeedback;
 
-                    if (responsiveReviewBox[j].classList.contains("click-box-3"))
-                        responsiveReviewBox[j].classList.remove("click-box-3");
+// //////////////////
+// FUNCTIONS
 
-                    if (responsiveReviewBox[j].classList.contains("click-right-box"))
-                        responsiveReviewBox[j].classList.remove("click-right-box");
-
-                    if (responsiveReviewBox[j].classList.contains("click-left-box")) {
-                        responsiveReviewBox[j].classList.remove("click-left-box");
-                    } else {
-                        responsiveReviewBox[j].classList.add("click-left-box");
-                    }
-                }
-                break;
-
-            case 1:
-                for (let j = 0; j <= selectedItemId; j++) {
-                    if (responsiveReviewBox[j].classList.contains("click-left-box"))
-                        responsiveReviewBox[j].classList.remove("click-left-box");
-
-                    if (responsiveReviewBox[j].classList.contains("click-box-2"))
-                        responsiveReviewBox[j].classList.remove("click-box-2");
-
-                    if (responsiveReviewBox[j].classList.contains("click-box-3"))
-                        responsiveReviewBox[j].classList.remove("click-box-3");
-
-                    if (responsiveReviewBox[j].classList.contains("click-right-box"))
-                        responsiveReviewBox[j].classList.remove("click-right-box");
-
-                    if (responsiveReviewBox[j].classList.contains("click-box-1")) {
-                        responsiveReviewBox[j].classList.remove("click-box-1");
-                    } else {
-                        responsiveReviewBox[j].classList.add("click-box-1");
-                    }
-                }
-                break;
-
-            case 2:
-                for (let j = 0; j <= selectedItemId; j++) {
-                    if (responsiveReviewBox[j].classList.contains("click-left-box"))
-                        responsiveReviewBox[j].classList.remove("click-left-box");
-
-                    if (responsiveReviewBox[j].classList.contains("click-box-1"))
-                        responsiveReviewBox[j].classList.remove("click-box-1");
-
-                    if (responsiveReviewBox[j].classList.contains("click-box-3"))
-                        responsiveReviewBox[j].classList.remove("click-box-3");
-
-                    if (responsiveReviewBox[j].classList.contains("click-right-box"))
-                        responsiveReviewBox[j].classList.remove("click-right-box");
-
-                    if (responsiveReviewBox[j].classList.contains("click-box-2")) {
-                        responsiveReviewBox[j].classList.remove("click-box-2");
-                    } else {
-                        responsiveReviewBox[j].classList.add("click-box-2");
-                    }
-                }
-
-                break;
-
-            case 3:
-                for (let j = 0; j <= selectedItemId; j++) {
-                    if (responsiveReviewBox[j].classList.contains("click-left-box"))
-                        responsiveReviewBox[j].classList.remove("click-left-box");
-
-                    if (responsiveReviewBox[j].classList.contains("click-box-1"))
-                        responsiveReviewBox[j].classList.remove("click-box-1");
-
-                    if (responsiveReviewBox[j].classList.contains("click-box-2"))
-                        responsiveReviewBox[j].classList.remove("click-box-2");
-
-                    if (responsiveReviewBox[j].classList.contains("click-right-box"))
-                        responsiveReviewBox[j].classList.remove("click-right-box");
-
-                    if (responsiveReviewBox[j].classList.contains("click-box-3")) {
-                        responsiveReviewBox[j].classList.remove("click-box-3");
-                    } else {
-                        responsiveReviewBox[j].classList.add("click-box-3");
-                    }
-                }
-                break;
-
-            case 4:
-                for (let j = 0; j <= selectedItemId; j++) {
-                    if (responsiveReviewBox[j].classList.contains("click-left-box"))
-                        responsiveReviewBox[j].classList.remove("click-left-box");
-
-                    if (responsiveReviewBox[j].classList.contains("click-box-1"))
-                        responsiveReviewBox[j].classList.remove("click-box-1");
-
-                    if (responsiveReviewBox[j].classList.contains("click-box-2"))
-                        responsiveReviewBox[j].classList.remove("click-box-2");
-
-                    if (responsiveReviewBox[j].classList.contains("click-box-3"))
-                        responsiveReviewBox[j].classList.remove("click-box-3");
-
-                    //
-                    if (responsiveReviewBox[j].classList.contains("click-right-box")) {
-                        responsiveReviewBox[j].classList.remove("click-right-box");
-                    } else {
-                        responsiveReviewBox[j].classList.add("click-right-box");
-                    }
-                }
-
-                break;
-
-            default:
-                break;
-        }
-
-        responsiveReview = selectedItemId;
-        switch (responsiveReview) {
-            case 0:
-                responsiveReview = "Extremely bad";
-                break;
-
-            case 1:
-                responsiveReview = "Bad";
-                break;
-
-            case 2:
-                responsiveReview = "Neutral";
-                break;
-
-            case 3:
-                responsiveReview = "Good";
-                break;
-
-            case 4:
-                responsiveReview = "Extremely Good";
-                break;
-            default:
-                console.log("!!! error 💥");
-                break;
-        }
-    });
+// Function to remove color from all boxes
+const removeColorFromAllBoxes = (array) => {
+    for (let i = 0; i < array.length; i++) {
+        array[i].classList.remove(
+            'click-left-box',
+            'click-box-1',
+            'click-box-2',
+            'click-box-3',
+            'click-right-box'
+        );
+    }
 };
 
-// Reviews
-let responsiveReview;
+// Function to add color to boxes
+const addColorToBoxes = (array) => {
+    for (let i = 0; i < array.length; i++) {}
+};
 
-for (let i = 0; i < responsiveReviewBox.length; i++) {
-    let feedbackId;
+// Function to return the selected value
+const returnSelectedValue = (selectedItemId) => {
+    switch (selectedItemId) {
+        case 0:
+            selectedValue = 'Extremely Bad';
+            break;
 
-    (function () {
-        if (i == 0) feedbackId = 0;
-        else if (i == 1) feedbackId = 1;
-        else if (i == 2) feedbackId = 2;
-        else if (i == 3) feedbackId = 3;
-        else if (i == 4) feedbackId = 4;
-        else console.log("!!! error 💥");
+        case 1:
+            selectedValue = 'Bad';
+            break;
 
-        return feedbackId;
-    })();
+        case 2:
+            selectedValue = 'Neutral';
+            break;
 
-    nameTheFunc(feedbackId);
-}
+        case 3:
+            selectedValue = 'Good';
+            break;
 
-submitButton.addEventListener("click", () => {
-    console.log(`User responsiveness review: ${responsiveReview}`);
+        case 4:
+            selectedValue = 'Extremely Good';
+            break;
+
+        default:
+            alert('Error in returning the selected value 💥!');
+            break;
+    }
+
+    return selectedValue;
+};
+
+// //////////////////////////////
+// EXECUTION OF THE APPLICATION
+
+(() => {
+    // Execution of responsiveness review
+    for (let i = 0; i < responsiveReviewBox.length; i++) {
+        responsiveReviewBox[i].addEventListener('click', () => {
+            // remove color from all boxes
+            removeColorFromAllBoxes(responsiveReviewBox);
+
+            // Add color to all boxes
+            for (let j = 0; j <= i; j++) {
+                responsiveReviewBox[j].classList.add(allColorClassNames[i]);
+            }
+
+            responsivenessFeedback = returnSelectedValue(i);
+        });
+    }
+
+    // Execution of conpetency review
+    for (let i = 0; i < conpetencyReviewBox.length; i++) {
+        conpetencyReviewBox[i].addEventListener('click', () => {
+            // remove color from all boxes
+            removeColorFromAllBoxes(conpetencyReviewBox);
+
+            // Add color to all boxes
+            for (let j = 0; j <= i; j++) {
+                conpetencyReviewBox[j].classList.add(allColorClassNames[i]);
+            }
+
+            conpetencyFeedback = returnSelectedValue(i);
+        });
+    }
+
+    // Execution of trust review
+    for (let i = 0; i < trustReviewBox.length; i++) {
+        trustReviewBox[i].addEventListener('click', () => {
+            // remove color from all boxes
+            removeColorFromAllBoxes(trustReviewBox);
+
+            // Add color to all boxes
+            for (let j = 0; j <= i; j++) {
+                trustReviewBox[j].classList.add(allColorClassNames[i]);
+            }
+
+            trustFeedback = returnSelectedValue(i);
+        });
+    }
+
+    // Execution of service review
+    for (let i = 0; i < serviceReviewBox.length; i++) {
+        serviceReviewBox[i].addEventListener('click', () => {
+            // remove color from all boxes
+            removeColorFromAllBoxes(serviceReviewBox);
+
+            // Add color to all boxes
+            for (let j = 0; j <= i; j++) {
+                serviceReviewBox[j].classList.add(allColorClassNames[i]);
+            }
+
+            serviceFeedback = returnSelectedValue(i);
+        });
+    }
+})();
+
+submitButton.addEventListener('click', () => {
+    console.log(`Responsiveness Feedback: ${responsivenessFeedback}`);
+    console.log(`Conpetency Feedback: ${conpetencyFeedback}`);
+    console.log(`Trust Feedback: ${trustFeedback}`);
+    console.log(`Service Feedback: ${serviceFeedback}`);
 });

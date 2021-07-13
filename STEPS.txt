@@ -1,0 +1,11 @@
+// ///////////////////////
+// STEPS
+
+// 1. Remove color from all of the boxes in the row
+// 2. Get the position of the clicked box
+// 3. Color all boxes behind the selected box
+// 4. Color the boxes with the color in the position of the selected box
+// 5. Use the position in step 2 to get the feedback for the submit button
+// 6. Write function for the steps above
+// 7. Submit the result on clicking the submit button
+// 8. Log all of the feedback values to the console

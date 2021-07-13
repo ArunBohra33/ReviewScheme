@@ -4,116 +4,76 @@
 .middle-box-3,
 .right-box {
     display: inline-block;
-    width: 150px;
-    height: 40px;
+    width: 15rem;
+    height: 4rem;
     background-color: #bbbbbb;
     position: relative;
     cursor: pointer;
-    transition: all 0s;
+    transition: all 0.5s;
 }
 
 /* ----------------------------- */
 /* After psudo emements */
 /* ----------------------------- */
-.right-box::after {
-    content: "";
+.right-box::after,
+.left-box::after {
+    content: '';
     display: inline-block;
+    border-top: 2rem solid transparent;
+    border-bottom: 2rem solid transparent;
+
     position: absolute;
+}
+
+.right-box::after {
     top: 0;
-    right: -15px;
-
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-
-    border-left: 15px solid #bbb;
+    right: -1.5rem;
+    border-left: 1.5rem solid #bbb;
 }
 
 .left-box::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
     top: 0;
-    left: -15px;
-
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-
-    border-right: 15px solid #bbb;
+    left: -1.5rem;
+    border-right: 1.5rem solid #bbb;
 }
 
 /* ----------------------------- */
 /* Before psudo emements */
 /* ----------------------------- */
 
-.left-box::before {
-    content: "Extremely bad";
+.left-box::before,
+.middle-box-1::before,
+.middle-box-2::before,
+.middle-box-3::before,
+.right-box::before {
+    width: 100%;
     display: inline-block;
-    color: #000;
-    font-size: 1.2rem;
+    color: black;
     margin: 0.4rem;
     font-size: 1.4rem;
-
     position: absolute;
     top: -2.5rem;
-    width: 100%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+/* Before elements content */
+.left-box::before {
+    content: 'Extremely bad';
 }
 
 .middle-box-1::before {
-    content: "Bad";
-    display: inline-block;
-    color: #000;
-    font-size: 1.2rem;
-    margin: 0.4rem;
-    font-size: 1.4rem;
-
-    position: absolute;
-    top: -2.5rem;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    content: 'Bad';
 }
+
 .middle-box-2::before {
-    content: "Neutral";
-    display: inline-block;
-    color: #000;
-    font-size: 1.2rem;
-    margin: 0.4rem;
-    font-size: 1.4rem;
-
-    position: absolute;
-    top: -2.5rem;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    content: 'Neutral';
 }
-.middle-box-3::before {
-    content: "Good";
-    display: inline-block;
-    color: #000;
-    font-size: 1.2rem;
-    margin: 0.4rem;
-    font-size: 1.4rem;
 
-    position: absolute;
-    top: -2.5rem;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+.middle-box-3::before {
+    content: 'Good';
 }
 
 .right-box::before {
-    content: "Extremely good";
-    display: inline-block;
-    color: #000;
-    font-size: 1rem;
-    margin: 0.4rem;
-    font-size: 1.4rem;
-
-    position: absolute;
-    top: -2.5rem;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    content: 'Extremely good';
 }
