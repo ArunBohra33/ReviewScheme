@@ -1,0 +1,28 @@
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 2rem 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+.main-container > * {
+    margin: 2rem 0;
+}
+
+.submit-button-container {
+    margin-top: 4rem;
+}
+
+.submit-button {
+    padding: 1.2rem 4rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: green;
+    color: #fff;
+}
